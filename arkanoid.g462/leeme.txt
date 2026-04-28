@@ -1,0 +1,5 @@
+
+Godot 4.6.2
+
+- Versión original: Godot version 3.2.2.
+- Se pasa a Godot 4.6.2
