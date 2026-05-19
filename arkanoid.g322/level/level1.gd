@@ -1,6 +1,10 @@
 extends Node2D
 
 export var next_level = "game_over"
+onready var sound = $sound
+
+func _ready():
+	sound.play()
 
 func _process(_delta):
 	# Player wins!

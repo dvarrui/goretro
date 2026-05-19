@@ -6,9 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 28, 14 )
 
-[node name="block" type="StaticBody2D" groups=[
-"block",
-]]
+[node name="block" type="StaticBody2D" groups=["block"]]
 input_pickable = true
 script = ExtResource( 2 )
 

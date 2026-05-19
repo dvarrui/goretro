@@ -12,6 +12,6 @@ func _ready():
 	$sprite.texture = load("res://wall/block_" + type + ".png")
 
 func hit():
-	hits +=1 
+	hits += 1
 	if hits >= life:
 		queue_free()
