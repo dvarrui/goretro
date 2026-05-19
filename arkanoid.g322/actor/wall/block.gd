@@ -9,7 +9,7 @@ func _ready():
 		life = 1
 	if type == "green":
 		life = 2
-	$sprite.texture = load("res://wall/block_" + type + ".png")
+	$sprite.texture = load("res://actor/wall/block/" + type + ".png")
 
 func hit():
 	hits += 1

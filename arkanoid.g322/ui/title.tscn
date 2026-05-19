@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ui/title.gd" type="Script" id=1]
 [ext_resource path="res://assets/MinecraftRegular-Bmg3.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://assets/sfx/levelup.ogg" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -51,9 +50,6 @@ text = "Start New Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="audio" type="AudioStreamPlayer2D" parent="margin/v_container/start"]
-stream = ExtResource( 3 )
 
 [node name="quit" type="Button" parent="margin/v_container"]
 margin_top = 93.0

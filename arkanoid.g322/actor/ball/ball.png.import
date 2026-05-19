@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/block_yellow.png-5bac275934db7f160bd6bd6816437b84.stex"
+path="res://.import/ball.png-e07f664ce583e07c4b42b546ad3dd44d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://wall/block_yellow.png"
-dest_files=[ "res://.import/block_yellow.png-5bac275934db7f160bd6bd6816437b84.stex" ]
+source_file="res://actor/ball/ball.png"
+dest_files=[ "res://.import/ball.png-e07f664ce583e07c4b42b546ad3dd44d.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
