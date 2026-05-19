@@ -5,10 +5,8 @@ var life = 1
 var hits = 0
 
 func _ready():
-	if type == "red":
-		life = 1
-	if type == "green":
-		life = 2
+	if type == "grey":
+		life = 3
 	$sprite.texture = load("res://actor/wall/block/" + type + ".png")
 
 func hit():
