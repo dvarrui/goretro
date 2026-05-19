@@ -1,7 +1,5 @@
 extends Node2D
 
-onready var audio_start = $margin/v_container/start/audio
-
 func _on_start_pressed():
 	start_new_game()
 
