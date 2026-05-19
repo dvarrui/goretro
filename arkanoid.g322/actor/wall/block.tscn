@@ -16,4 +16,10 @@ texture = ExtResource( 1 )
 [node name="shape" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="effect" type="Tween" parent="."]
+[node name="timer" type="Timer" parent="."]
+
+[node name="effect" type="Node2D" parent="."]
+
+[node name="size" type="Tween" parent="effect"]
+
+[node name="shine" type="Tween" parent="effect"]
