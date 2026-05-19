@@ -11,6 +11,7 @@ func _physics_process(delta):
 	# Check collisions
 	for body in get_colliding_bodies():
 		if body.is_in_group("block"):
+			sound_block.pitch_scale = rand_range(1, 1.2)
 			sound_block.play()
 			body.hit()
 		else:
