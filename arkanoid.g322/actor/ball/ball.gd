@@ -14,6 +14,7 @@ func _physics_process(delta):
 			sound_block.play()
 			body.hit()
 		else:
+			sound_wall.pitch_scale = rand_range(0.8, 1.2)
 			sound_wall.play()
 
 func _on_visibility_screen_exited():
