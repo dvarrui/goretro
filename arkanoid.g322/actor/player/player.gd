@@ -12,4 +12,4 @@ func _physics_process(delta):
 	if Input.is_action_pressed("player_right"):
 		motion = Vector2(1,0)
 	move_and_collide(motion*speed)
-	pass
+	
