@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/MinecraftRegular-Bmg3.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://ui/pause.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/MinecraftRegular-Bmg3.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 2 )
+
+[node name="pause" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 3 )
+
+[node name="background" type="ColorRect" parent="."]
+margin_right = 402.0
+margin_bottom = 599.0
+color = Color( 0, 0, 0, 0.235294 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="v_container" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 55.0
+margin_right = 336.0
+margin_bottom = 592.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="paused" type="Label" parent="v_container"]
+margin_top = 221.0
+margin_right = 281.0
+margin_bottom = 254.0
+custom_fonts/font = SubResource( 2 )
+text = "Paused!"
+align = 1
+
+[node name="title" type="Label" parent="v_container"]
+margin_top = 258.0
+margin_right = 281.0
+margin_bottom = 323.0
+custom_fonts/font = SubResource( 3 )
+text = "Arkanoid"
+align = 1
+autowrap = true
+
+[node name="continue" type="Button" parent="v_container"]
+margin_top = 327.0
+margin_right = 281.0
+margin_bottom = 347.0
+text = "Cotinue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="Button" parent="v_container"]
+margin_top = 351.0
+margin_right = 281.0
+margin_bottom = 371.0
+text = "Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="v_container/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="v_container/menu" to="." method="_on_menu_pressed"]
