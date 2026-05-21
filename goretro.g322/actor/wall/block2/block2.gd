@@ -52,15 +52,15 @@ func hit():
 		queue_free()
 
 func run_effect_hit():
+	var scale1 = sprite.scale
+	var scale2 = scale1 * 1.1
 	# Efecto de escala (Impacto)
-	# Animamos la escala de (1,1) a (1.2, 1.2) en 0.1 segundos
-	effect_hit.interpolate_property($sprite, "scale",
-		Vector2(1, 1), Vector2(1.2, 1.2), 0.05,
+	effect_hit.interpolate_property(sprite, "scale",
+		scale1, scale2, 0.05,
 		Tween.TRANS_QUAD, Tween.EASE_OUT)
 	
-	# Animamos la vuelta a la normalidad de (1.2, 1.2) a (1,1)
-	effect_hit.interpolate_property($sprite, "scale",
-		Vector2(1.2, 1.2), Vector2(1, 1), 0.05,
+	effect_hit.interpolate_property(sprite, "scale",
+		scale2, scale1, 0.05,
 		Tween.TRANS_QUAD, Tween.EASE_IN, 0.1) # El 0.1 final es el retraso (delay)
 		
 	effect_hit.start()

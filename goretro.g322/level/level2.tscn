@@ -158,4 +158,7 @@ visible = false
 stream = ExtResource( 6 )
 
 [node name="block2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 197, 239 )
+position = Vector2( 241, 227 )
+
+[node name="block3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 317, 226 )

@@ -13,7 +13,7 @@ func _process(delta):
 		close_game()
 
 func start_new_game():
-	get_tree().change_scene("res://level/level1.tscn")
+	get_tree().change_scene("res://level/level2.tscn")
 
 func close_game():
 	get_tree().quit()
