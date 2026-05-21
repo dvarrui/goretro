@@ -1,19 +1,23 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://actor/wall/block/red.png" type="Texture" id=1]
-[ext_resource path="res://actor/wall/block.gd" type="Script" id=2]
+[ext_resource path="res://assets/goretro.png" type="Texture" id=1]
+[ext_resource path="res://actor/wall/block2/block2.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 28, 14 )
+extents = Vector2( 34, 11 )
 
-[node name="block" type="StaticBody2D" groups=["block"]]
+[node name="block2" type="StaticBody2D" groups=["block"]]
 input_pickable = true
 script = ExtResource( 2 )
 
 [node name="sprite" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 24, 16, 24, 8 )
 
 [node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2( -1, 0 )
 shape = SubResource( 1 )
 
 [node name="timer" type="Timer" parent="."]

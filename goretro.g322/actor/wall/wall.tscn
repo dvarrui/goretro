@@ -1,31 +1,25 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://actor/wall/block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://actor/wall/block/block.tscn" type="PackedScene" id=1]
 
 [node name="wall" type="Node2D"]
 
 [node name="block01" parent="." instance=ExtResource( 1 )]
-type = "yellow"
 
 [node name="block02" parent="." instance=ExtResource( 1 )]
 position = Vector2( 64, 0 )
-type = "yellow"
 
 [node name="block03" parent="." instance=ExtResource( 1 )]
 position = Vector2( 128, 0 )
-type = "yellow"
 
 [node name="block04" parent="." instance=ExtResource( 1 )]
 position = Vector2( 192, 0 )
-type = "yellow"
 
 [node name="block05" parent="." instance=ExtResource( 1 )]
 position = Vector2( 256, 0 )
-type = "yellow"
 
 [node name="block06" parent="." instance=ExtResource( 1 )]
 position = Vector2( 320, 0 )
-type = "yellow"
 
 [node name="block11" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, 32 )
@@ -47,24 +41,18 @@ position = Vector2( 320, 32 )
 
 [node name="block21" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, 64 )
-type = "green"
 
 [node name="block22" parent="." instance=ExtResource( 1 )]
 position = Vector2( 64, 64 )
-type = "green"
 
 [node name="block23" parent="." instance=ExtResource( 1 )]
 position = Vector2( 128, 64 )
-type = "green"
 
 [node name="block24" parent="." instance=ExtResource( 1 )]
 position = Vector2( 192, 64 )
-type = "green"
 
 [node name="block25" parent="." instance=ExtResource( 1 )]
 position = Vector2( 256, 64 )
-type = "green"
 
 [node name="block26" parent="." instance=ExtResource( 1 )]
 position = Vector2( 320, 64 )
-type = "green"

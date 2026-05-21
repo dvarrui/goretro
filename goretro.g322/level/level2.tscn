@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://level/level1.gd" type="Script" id=1]
 [ext_resource path="res://actor/player/player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://actor/ball/ball.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui/pause.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/sfx/levelup.ogg" type="AudioStream" id=6]
+[ext_resource path="res://actor/wall/block2/block2.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 200, 10 )
@@ -155,3 +156,6 @@ visible = false
 
 [node name="sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
+
+[node name="block2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 197, 239 )
