@@ -17,7 +17,7 @@ radius = 9.0
 physics_material_override = SubResource( 1 )
 contacts_reported = 1
 contact_monitor = true
-linear_velocity = Vector2( 50, -200 )
+linear_velocity = Vector2( 50, -250 )
 linear_damp = 0.0
 script = ExtResource( 2 )
 

@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://level/level1.gd" type="Script" id=1]
 [ext_resource path="res://actor/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://actor/wall/block/block.tscn" type="PackedScene" id=3]
 [ext_resource path="res://actor/ball/ball.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui/pause.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/sfx/levelup.ogg" type="AudioStream" id=6]
-[ext_resource path="res://actor/wall/block2/block2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://actor/wall/block3/block3.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 300, 10 )
@@ -18,7 +17,7 @@ extents = Vector2( 10, 300 )
 script = ExtResource( 1 )
 
 [node name="background" type="ColorRect" parent="."]
-margin_right = 600.0
+margin_right = 582.0
 margin_bottom = 600.0
 color = Color( 0.027451, 0.027451, 0.133333, 1 )
 
@@ -37,112 +36,109 @@ position = Vector2( -10, 300 )
 shape = SubResource( 2 )
 
 [node name="right" type="StaticBody2D" parent="borders"]
-position = Vector2( 610, 300 )
+position = Vector2( 592, 300 )
 
 [node name="shape" type="CollisionShape2D" parent="borders/right"]
 shape = SubResource( 2 )
 
 [node name="wall" type="Node2D" parent="."]
-position = Vector2( 40, 64 )
 
 [node name="row1" type="Node2D" parent="wall"]
-position = Vector2( -40, -65 )
+position = Vector2( 0, 80 )
 
-[node name="block01" parent="wall/row1" instance=ExtResource( 3 )]
-position = Vector2( 40, 65 )
-type = "yellow"
+[node name="block1" parent="wall/row1" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
 
-[node name="block02" parent="wall/row1" instance=ExtResource( 3 )]
-position = Vector2( 104, 65 )
-type = "yellow"
+[node name="block2" parent="wall/row1" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
 
-[node name="block03" parent="wall/row1" instance=ExtResource( 3 )]
-position = Vector2( 168, 65 )
-type = "yellow"
+[node name="block3" parent="wall/row1" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
 
-[node name="block04" parent="wall/row1" instance=ExtResource( 3 )]
-position = Vector2( 232, 65 )
-type = "yellow"
+[node name="block4" parent="wall/row1" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
 
-[node name="block05" parent="wall/row1" instance=ExtResource( 3 )]
-position = Vector2( 296, 65 )
-type = "yellow"
+[node name="block5" parent="wall/row1" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
 
-[node name="block06" parent="wall/row1" instance=ExtResource( 3 )]
-position = Vector2( 360, 65 )
-type = "yellow"
+[node name="block6" parent="wall/row1" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+
+[node name="block7" parent="wall/row1" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+
+[node name="block8" parent="wall/row1" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
 
 [node name="row2" type="Node2D" parent="wall"]
+position = Vector2( 0, 104 )
 
-[node name="block11" parent="wall/row2" instance=ExtResource( 3 )]
-position = Vector2( 0, 32 )
+[node name="block1" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "orange"
 
-[node name="block12" parent="wall/row2" instance=ExtResource( 3 )]
-position = Vector2( 64, 32 )
+[node name="block2" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "orange"
 
-[node name="block13" parent="wall/row2" instance=ExtResource( 3 )]
-position = Vector2( 128, 32 )
+[node name="block3" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "orange"
 
-[node name="block14" parent="wall/row2" instance=ExtResource( 3 )]
-position = Vector2( 192, 32 )
+[node name="block4" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "orange"
 
-[node name="block15" parent="wall/row2" instance=ExtResource( 3 )]
-position = Vector2( 256, 32 )
+[node name="block5" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "orange"
 
-[node name="block16" parent="wall/row2" instance=ExtResource( 3 )]
-position = Vector2( 320, 32 )
+[node name="block6" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "orange"
+
+[node name="block7" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "orange"
+
+[node name="block8" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "orange"
 
 [node name="row3" type="Node2D" parent="wall"]
+position = Vector2( 0, 128 )
 
-[node name="block21" parent="wall/row3" instance=ExtResource( 3 )]
-position = Vector2( 0, 64 )
-type = "green"
+[node name="block1" parent="wall/row3" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "yellow"
 
-[node name="block22" parent="wall/row3" instance=ExtResource( 3 )]
-position = Vector2( 64, 64 )
-type = "green"
+[node name="block2" parent="wall/row3" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "yellow"
 
-[node name="block23" parent="wall/row3" instance=ExtResource( 3 )]
-position = Vector2( 128, 64 )
-type = "green"
+[node name="block3" parent="wall/row3" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "yellow"
 
-[node name="block24" parent="wall/row3" instance=ExtResource( 3 )]
-position = Vector2( 192, 64 )
-type = "green"
+[node name="block4" parent="wall/row3" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "yellow"
 
-[node name="block25" parent="wall/row3" instance=ExtResource( 3 )]
-position = Vector2( 256, 64 )
-type = "green"
+[node name="block5" parent="wall/row3" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "yellow"
 
-[node name="block26" parent="wall/row3" instance=ExtResource( 3 )]
-position = Vector2( 320, 64 )
-type = "green"
+[node name="block6" parent="wall/row3" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "yellow"
 
-[node name="row4" type="Node2D" parent="wall"]
+[node name="block7" parent="wall/row3" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "yellow"
 
-[node name="block27" parent="wall/row4" instance=ExtResource( 3 )]
-position = Vector2( 0, 96 )
-type = "blue"
-
-[node name="block28" parent="wall/row4" instance=ExtResource( 3 )]
-position = Vector2( 64, 96 )
-type = "blue"
-
-[node name="block29" parent="wall/row4" instance=ExtResource( 3 )]
-position = Vector2( 128, 96 )
-type = "blue"
-
-[node name="block30" parent="wall/row4" instance=ExtResource( 3 )]
-position = Vector2( 192, 96 )
-type = "blue"
-
-[node name="block31" parent="wall/row4" instance=ExtResource( 3 )]
-position = Vector2( 256, 96 )
-type = "blue"
-
-[node name="block32" parent="wall/row4" instance=ExtResource( 3 )]
-position = Vector2( 320, 96 )
-type = "blue"
+[node name="block8" parent="wall/row3" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "yellow"
 
 [node name="ball" parent="." instance=ExtResource( 4 )]
 position = Vector2( 200, 500 )
@@ -156,9 +152,3 @@ visible = false
 
 [node name="sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
-
-[node name="block2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 241, 227 )
-
-[node name="block3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 317, 226 )

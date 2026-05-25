@@ -2,7 +2,7 @@
 
 [ext_resource path="res://level/level1.gd" type="Script" id=1]
 [ext_resource path="res://actor/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://actor/wall/block/block.tscn" type="PackedScene" id=3]
+[ext_resource path="res://actor/wall/block0/block.tscn" type="PackedScene" id=3]
 [ext_resource path="res://actor/ball/ball.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui/pause.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/sfx/levelup.ogg" type="AudioStream" id=6]
