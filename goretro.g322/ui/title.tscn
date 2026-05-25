@@ -51,20 +51,20 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="background" type="ColorRect" parent="."]
-margin_right = 400.0
+margin_right = 600.0
 margin_bottom = 600.0
 color = Color( 0.188235, 0.0117647, 0.901961, 1 )
 
 [node name="margin" type="MarginContainer" parent="."]
-margin_left = 63.0
-margin_top = 49.0
-margin_right = 337.0
-margin_bottom = 529.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 550.0
+margin_bottom = 550.0
 
 [node name="v_container" type="VBoxContainer" parent="margin"]
-margin_top = 151.0
-margin_right = 274.0
-margin_bottom = 328.0
+margin_top = 161.0
+margin_right = 500.0
+margin_bottom = 338.0
 size_flags_vertical = 4
 alignment = 1
 __meta__ = {
@@ -72,7 +72,7 @@ __meta__ = {
 }
 
 [node name="title" type="Label" parent="margin/v_container"]
-margin_right = 274.0
+margin_right = 500.0
 margin_bottom = 123.0
 custom_fonts/font = SubResource( 4 )
 text = "Canarias
@@ -82,7 +82,7 @@ autowrap = true
 
 [node name="start" type="Button" parent="margin/v_container"]
 margin_top = 127.0
-margin_right = 274.0
+margin_right = 500.0
 margin_bottom = 150.0
 custom_fonts/font = SubResource( 2 )
 text = "Start New Game"
@@ -93,7 +93,7 @@ __meta__ = {
 
 [node name="quit" type="Button" parent="margin/v_container"]
 margin_top = 154.0
-margin_right = 274.0
+margin_right = 500.0
 margin_bottom = 177.0
 custom_fonts/font = SubResource( 3 )
 text = "Quit"
@@ -103,7 +103,7 @@ __meta__ = {
 }
 
 [node name="amin" type="AnimatedSprite" parent="margin"]
-position = Vector2( 141, 367 )
+position = Vector2( 255, 380 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 10 )
 
