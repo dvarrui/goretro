@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
+path="res://.import/bombas.png-6abb1ccd17573659f09adfaf1b146832.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/goretro.png"
-dest_files=[ "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex" ]
+source_file="res://assets/bombas.png"
+dest_files=[ "res://.import/bombas.png-6abb1ccd17573659f09adfaf1b146832.stex" ]
 
 [params]
 
