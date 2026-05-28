@@ -14,9 +14,9 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 2 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 3 )
-region = Rect2( 0, 16, 16, 16 )
+region = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 3 )
@@ -36,7 +36,7 @@ region = Rect2( 16, 16, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ SubResource( 11 ) ],
+"frames": [ SubResource( 16 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -103,9 +103,13 @@ __meta__ = {
 }
 
 [node name="amin" type="AnimatedSprite" parent="margin"]
-position = Vector2( 255, 380 )
+position = Vector2( 247, 376 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 10 )
 
+[node name="timer" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="pressed" from="margin/v_container/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="margin/v_container/quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]

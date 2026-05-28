@@ -1,10 +1,10 @@
 extends Node2D
 
-func _on_start_pressed():
-	start_new_game()
+onready var bomb = $margin/amin
+onready var timer = $timer
 
-func _on_quit_pressed():
-	close_game()
+func _ready():
+	timer.start()
 
 func _process(delta):
 	if Input.is_action_just_pressed("game_new"):
@@ -13,7 +13,21 @@ func _process(delta):
 		close_game()
 
 func start_new_game():
-	get_tree().change_scene("res://level/level2.tscn")
+	get_tree().change_scene("res://level/level1/level1.tscn")
 
 func close_game():
 	get_tree().quit()
+
+func _on_start_pressed():
+	start_new_game()
+
+func _on_quit_pressed():
+	close_game()
+
+
+func _on_timer_timeout():
+	if 	bomb.animation == "move":
+		bomb.play("default")
+	else:
+		bomb.play("move")
+	timer.start()
