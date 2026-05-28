@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+onready var ball = "."
 onready var sound_block = $sound/block
 onready var sound_wall = $sound/wall
 onready var sound_gameover = $sound/gameover
@@ -8,12 +9,12 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	# Check collisions
 	for body in get_colliding_bodies():
 		if body.is_in_group("block"):
 			sound_block.pitch_scale = rand_range(1, 1.2)
 			sound_block.play()
 			body.hit()
+			apply_central_impulse(Vector2(0, 5))
 		else:
 			sound_wall.pitch_scale = rand_range(0.8, 1.2)
 			sound_wall.play()
