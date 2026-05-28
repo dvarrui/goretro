@@ -44,7 +44,7 @@ shape = SubResource( 2 )
 [node name="wall" type="Node2D" parent="."]
 
 [node name="row1" type="Node2D" parent="wall"]
-position = Vector2( 0, 80 )
+position = Vector2( 0, 32 )
 
 [node name="block1" parent="wall/row1" instance=ExtResource( 7 )]
 position = Vector2( 40, 0 )
@@ -71,7 +71,7 @@ position = Vector2( 472, 0 )
 position = Vector2( 544, 0 )
 
 [node name="row2" type="Node2D" parent="wall"]
-position = Vector2( 0, 104 )
+position = Vector2( 0, 56 )
 
 [node name="block1" parent="wall/row2" instance=ExtResource( 7 )]
 position = Vector2( 40, 0 )
@@ -106,7 +106,7 @@ position = Vector2( 544, 0 )
 color = "orange"
 
 [node name="row3" type="Node2D" parent="wall"]
-position = Vector2( 0, 128 )
+position = Vector2( 0, 80 )
 
 [node name="block1" parent="wall/row3" instance=ExtResource( 7 )]
 position = Vector2( 40, 0 )
@@ -140,12 +140,319 @@ color = "yellow"
 position = Vector2( 544, 0 )
 color = "yellow"
 
+[node name="row4" type="Node2D" parent="wall"]
+position = Vector2( 0, 104 )
+
+[node name="block1" parent="wall/row4" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "green"
+
+[node name="block2" parent="wall/row4" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "green"
+
+[node name="block3" parent="wall/row4" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "green"
+
+[node name="block4" parent="wall/row4" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "green"
+
+[node name="block5" parent="wall/row4" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "green"
+
+[node name="block6" parent="wall/row4" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "green"
+
+[node name="block7" parent="wall/row4" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "green"
+
+[node name="block8" parent="wall/row4" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "green"
+
+[node name="row5" type="Node2D" parent="wall"]
+position = Vector2( 0, 128 )
+
+[node name="block1" parent="wall/row5" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "blue"
+
+[node name="block2" parent="wall/row5" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "blue"
+
+[node name="block3" parent="wall/row5" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "blue"
+
+[node name="block4" parent="wall/row5" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "blue"
+
+[node name="block5" parent="wall/row5" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "blue"
+
+[node name="block6" parent="wall/row5" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "blue"
+
+[node name="block7" parent="wall/row5" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "blue"
+
+[node name="block8" parent="wall/row5" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "blue"
+
+[node name="row6" type="Node2D" parent="wall"]
+position = Vector2( 0, 152 )
+
+[node name="block1" parent="wall/row6" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "purple"
+
+[node name="block2" parent="wall/row6" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "purple"
+
+[node name="block3" parent="wall/row6" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "purple"
+
+[node name="block4" parent="wall/row6" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "purple"
+
+[node name="block5" parent="wall/row6" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "purple"
+
+[node name="block6" parent="wall/row6" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "purple"
+
+[node name="block7" parent="wall/row6" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "purple"
+
+[node name="block8" parent="wall/row6" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "purple"
+
+[node name="row8" type="Node2D" parent="wall"]
+position = Vector2( 0, 200 )
+
+[node name="block1" parent="wall/row8" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "orange"
+
+[node name="block2" parent="wall/row8" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "orange"
+
+[node name="block3" parent="wall/row8" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "orange"
+
+[node name="block4" parent="wall/row8" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "orange"
+
+[node name="block5" parent="wall/row8" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "orange"
+
+[node name="block6" parent="wall/row8" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "orange"
+
+[node name="block7" parent="wall/row8" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "orange"
+
+[node name="block8" parent="wall/row8" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "orange"
+
+[node name="row7" type="Node2D" parent="wall"]
+position = Vector2( 0, 176 )
+
+[node name="block1" parent="wall/row7" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+
+[node name="block2" parent="wall/row7" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+
+[node name="block3" parent="wall/row7" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+
+[node name="block4" parent="wall/row7" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+
+[node name="block5" parent="wall/row7" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+
+[node name="block6" parent="wall/row7" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+
+[node name="block7" parent="wall/row7" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+
+[node name="block8" parent="wall/row7" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+
+[node name="row9" type="Node2D" parent="wall"]
+position = Vector2( 0, 224 )
+
+[node name="block1" parent="wall/row9" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "yellow"
+
+[node name="block2" parent="wall/row9" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "yellow"
+
+[node name="block3" parent="wall/row9" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "yellow"
+
+[node name="block4" parent="wall/row9" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "yellow"
+
+[node name="block5" parent="wall/row9" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "yellow"
+
+[node name="block6" parent="wall/row9" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "yellow"
+
+[node name="block7" parent="wall/row9" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "yellow"
+
+[node name="block8" parent="wall/row9" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "yellow"
+
+[node name="row10" type="Node2D" parent="wall"]
+position = Vector2( 0, 248 )
+
+[node name="block1" parent="wall/row10" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "green"
+
+[node name="block2" parent="wall/row10" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "green"
+
+[node name="block3" parent="wall/row10" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "green"
+
+[node name="block4" parent="wall/row10" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "green"
+
+[node name="block5" parent="wall/row10" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "green"
+
+[node name="block6" parent="wall/row10" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "green"
+
+[node name="block7" parent="wall/row10" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "green"
+
+[node name="block8" parent="wall/row10" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "green"
+
+[node name="row11" type="Node2D" parent="wall"]
+position = Vector2( 0, 272 )
+
+[node name="block1" parent="wall/row11" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "blue"
+
+[node name="block2" parent="wall/row11" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "blue"
+
+[node name="block3" parent="wall/row11" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "blue"
+
+[node name="block4" parent="wall/row11" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "blue"
+
+[node name="block5" parent="wall/row11" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "blue"
+
+[node name="block6" parent="wall/row11" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "blue"
+
+[node name="block7" parent="wall/row11" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "blue"
+
+[node name="block8" parent="wall/row11" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "blue"
+
+[node name="row12" type="Node2D" parent="wall"]
+position = Vector2( 0, 296 )
+
+[node name="block1" parent="wall/row12" instance=ExtResource( 7 )]
+position = Vector2( 40, 0 )
+color = "purple"
+
+[node name="block2" parent="wall/row12" instance=ExtResource( 7 )]
+position = Vector2( 112, 0 )
+color = "purple"
+
+[node name="block3" parent="wall/row12" instance=ExtResource( 7 )]
+position = Vector2( 184, 0 )
+color = "purple"
+
+[node name="block4" parent="wall/row12" instance=ExtResource( 7 )]
+position = Vector2( 256, 0 )
+color = "purple"
+
+[node name="block5" parent="wall/row12" instance=ExtResource( 7 )]
+position = Vector2( 328, 0 )
+color = "purple"
+
+[node name="block6" parent="wall/row12" instance=ExtResource( 7 )]
+position = Vector2( 400, 0 )
+color = "purple"
+
+[node name="block7" parent="wall/row12" instance=ExtResource( 7 )]
+position = Vector2( 472, 0 )
+color = "purple"
+
+[node name="block8" parent="wall/row12" instance=ExtResource( 7 )]
+position = Vector2( 544, 0 )
+color = "purple"
+
 [node name="ball" parent="." instance=ExtResource( 4 )]
-position = Vector2( 200, 500 )
+position = Vector2( 300, 521 )
 linear_velocity = Vector2( 50, -300 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 200, 550 )
+position = Vector2( 300, 550 )
 
 [node name="pause" parent="." instance=ExtResource( 5 )]
 visible = false

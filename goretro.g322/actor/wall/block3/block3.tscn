@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://actor/wall/block3/block3.gd" type="Script" id=1]
 
@@ -6,6 +6,15 @@
 load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
 
 [sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
+
+[sub_resource type="StreamTexture" id=6]
 load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -34,9 +43,30 @@ region_rect = Rect2( 24, 8, 24, 8 )
 [node name="yellow" type="Sprite" parent="sprite"]
 visible = false
 scale = Vector2( 3, 3 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 region_enabled = true
 region_rect = Rect2( 24, 0, 24, 8 )
+
+[node name="green" type="Sprite" parent="sprite"]
+visible = false
+scale = Vector2( 3, 3 )
+texture = SubResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 24, 8 )
+
+[node name="blue" type="Sprite" parent="sprite"]
+visible = false
+scale = Vector2( 3, 3 )
+texture = SubResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 8, 24, 8 )
+
+[node name="purple" type="Sprite" parent="sprite"]
+visible = false
+scale = Vector2( 3, 3 )
+texture = SubResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 24, 8 )
 
 [node name="effect" type="Tween" parent="sprite"]
 

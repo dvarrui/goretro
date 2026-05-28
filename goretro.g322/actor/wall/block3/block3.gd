@@ -17,6 +17,15 @@ func _ready():
 	elif color == "yellow":
 		sprite = $sprite/yellow
 		sprite.visible = true
+	elif color == "green":
+		sprite = $sprite/green
+		sprite.visible = true
+	elif color == "blue":
+		sprite = $sprite/blue
+		sprite.visible = true
+	else:
+		sprite = $sprite/purple
+		sprite.visible = true
 
 func play_effect():
 	var color_normal = Color(1, 1, 1, 1)
