@@ -16,10 +16,10 @@ func _physics_process(delta):
 			body.hit()
 			
 			var f = self.linear_velocity.length()
-			if f < 250:
-				apply_central_impulse(Vector2(100, 100))
-			else:
-				apply_central_impulse(Vector2(0, 5))
+			# if f < 250:
+			#	apply_central_impulse(Vector2(100, 100))
+			# else:
+			# 	apply_central_impulse(Vector2(0, 5))
 		else:
 			sound_wall.pitch_scale = rand_range(0.8, 1.2)
 			sound_wall.play()
