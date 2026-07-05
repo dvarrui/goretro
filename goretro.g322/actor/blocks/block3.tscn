@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://actor/wall/block3/block3.gd" type="Script" id=1]
+[ext_resource path="res://actor/blocks/block3.gd" type="Script" id=1]
 
 [sub_resource type="StreamTexture" id=2]
 load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
