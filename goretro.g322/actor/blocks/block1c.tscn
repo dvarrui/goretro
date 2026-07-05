@@ -18,7 +18,7 @@ load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
 load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 34.5, 10.5 )
+extents = Vector2( 10.5, 10.3 )
 
 [node name="block3" type="StaticBody2D" groups=["block"]]
 input_pickable = true
@@ -31,42 +31,42 @@ visible = false
 scale = Vector2( 3, 3 )
 texture = SubResource( 2 )
 region_enabled = true
-region_rect = Rect2( 24, 16, 24, 8 )
+region_rect = Rect2( 40, 16, 8, 8 )
 
 [node name="orange" type="Sprite" parent="sprite"]
 visible = false
 scale = Vector2( 3, 3 )
 texture = SubResource( 3 )
 region_enabled = true
-region_rect = Rect2( 24, 8, 24, 8 )
+region_rect = Rect2( 40, 8, 8, 8 )
 
 [node name="yellow" type="Sprite" parent="sprite"]
 visible = false
 scale = Vector2( 3, 3 )
 texture = SubResource( 4 )
 region_enabled = true
-region_rect = Rect2( 24, 0, 24, 8 )
+region_rect = Rect2( 40, 0, 8, 8 )
 
 [node name="green" type="Sprite" parent="sprite"]
 visible = false
 scale = Vector2( 3, 3 )
 texture = SubResource( 5 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 24, 8 )
+region_rect = Rect2( 16, 0, 8, 8 )
 
 [node name="blue" type="Sprite" parent="sprite"]
 visible = false
 scale = Vector2( 3, 3 )
 texture = SubResource( 6 )
 region_enabled = true
-region_rect = Rect2( 0, 8, 24, 8 )
+region_rect = Rect2( 16, 8, 8, 8 )
 
 [node name="purple" type="Sprite" parent="sprite"]
 visible = false
 scale = Vector2( 3, 3 )
 texture = SubResource( 6 )
 region_enabled = true
-region_rect = Rect2( 0, 16, 24, 8 )
+region_rect = Rect2( 16, 16, 8, 8 )
 
 [node name="effect" type="Tween" parent="sprite"]
 
