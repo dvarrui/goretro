@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://actor/blocks/block.gd" type="Script" id=1]
+
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
+
+[sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
+
+[sub_resource type="StreamTexture" id=6]
+load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23.7, 10.3 )
+
+[node name="block2a" type="StaticBody2D" groups=["block"]]
+input_pickable = true
+script = ExtResource( 1 )
+
+[node name="sprite" type="Node2D" parent="."]
+
+[node name="red" type="Sprite" parent="sprite"]
+visible = false
+scale = Vector2( 3, 3 )
+texture = SubResource( 2 )
+region_enabled = true
+region_rect = Rect2( 24, 16, 16, 8 )
+
+[node name="orange" type="Sprite" parent="sprite"]
+visible = false
+scale = Vector2( 3, 3 )
+texture = SubResource( 3 )
+region_enabled = true
+region_rect = Rect2( 24, 8, 16, 8 )
+
+[node name="yellow" type="Sprite" parent="sprite"]
+visible = false
+scale = Vector2( 3, 3 )
+texture = SubResource( 4 )
+region_enabled = true
+region_rect = Rect2( 24, 0, 16, 8 )
+
+[node name="green" type="Sprite" parent="sprite"]
+visible = false
+scale = Vector2( 3, 3 )
+texture = SubResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 8 )
+
+[node name="blue" type="Sprite" parent="sprite"]
+visible = false
+scale = Vector2( 3, 3 )
+texture = SubResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 8, 16, 8 )
+
+[node name="purple" type="Sprite" parent="sprite"]
+visible = false
+scale = Vector2( 3, 3 )
+texture = SubResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 8 )
+
+[node name="effect" type="Tween" parent="sprite"]
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 1 )

@@ -2,7 +2,7 @@ extends Node2D
 
 onready var bomb = $margin/amin
 onready var timer = $timer
-export var next_level = "level1"
+export var next_level = "level2"
 
 func _ready():
 	timer.start()

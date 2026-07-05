@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://levels/level.gd" type="Script" id=1]
 [ext_resource path="res://ui/pause.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://actor/ball/ball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://actor/blocks/block1c.tscn" type="PackedScene" id=7]
 [ext_resource path="res://actor/blocks/block1a.tscn" type="PackedScene" id=8]
+[ext_resource path="res://actor/blocks/block2b.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 300, 10 )
@@ -87,7 +88,7 @@ color = "orange"
 position = Vector2( 160, 0 )
 color = "orange"
 
-[node name="block4" parent="wall/row2" instance=ExtResource( 5 )]
+[node name="block4b" parent="wall/row2" instance=ExtResource( 8 )]
 position = Vector2( 256, 0 )
 color = "orange"
 
@@ -200,8 +201,8 @@ color = "blue"
 position = Vector2( 160, 0 )
 color = "blue"
 
-[node name="block4" parent="wall/row5" instance=ExtResource( 5 )]
-position = Vector2( 256, 0 )
+[node name="block4b" parent="wall/row5" instance=ExtResource( 9 )]
+position = Vector2( 268, 0 )
 color = "blue"
 
 [node name="block5" parent="wall/row5" instance=ExtResource( 5 )]
@@ -241,7 +242,6 @@ color = "purple"
 
 [node name="block4" parent="wall/row6" instance=ExtResource( 5 )]
 position = Vector2( 256, 0 )
-color = "purple"
 
 [node name="block5" parent="wall/row6" instance=ExtResource( 5 )]
 position = Vector2( 328, 0 )
@@ -259,6 +259,36 @@ color = "purple"
 position = Vector2( 544, 0 )
 color = "purple"
 
+[node name="row7" type="Node2D" parent="wall"]
+position = Vector2( 0, 176 )
+
+[node name="block1" parent="wall/row7" instance=ExtResource( 5 )]
+position = Vector2( 40, 0 )
+
+[node name="block22" parent="wall/row7" instance=ExtResource( 8 )]
+position = Vector2( 112, 0 )
+
+[node name="block31" parent="wall/row7" instance=ExtResource( 8 )]
+position = Vector2( 160, 0 )
+
+[node name="block33" parent="wall/row7" instance=ExtResource( 7 )]
+position = Vector2( 208, 0 )
+
+[node name="block4" parent="wall/row7" instance=ExtResource( 5 )]
+position = Vector2( 256, 0 )
+
+[node name="block5" parent="wall/row7" instance=ExtResource( 5 )]
+position = Vector2( 328, 0 )
+
+[node name="block6" parent="wall/row7" instance=ExtResource( 5 )]
+position = Vector2( 400, 0 )
+
+[node name="block7" parent="wall/row7" instance=ExtResource( 5 )]
+position = Vector2( 472, 0 )
+
+[node name="block8" parent="wall/row7" instance=ExtResource( 5 )]
+position = Vector2( 544, 0 )
+
 [node name="row8" type="Node2D" parent="wall"]
 position = Vector2( 0, 200 )
 
@@ -266,16 +296,16 @@ position = Vector2( 0, 200 )
 position = Vector2( 40, 0 )
 color = "orange"
 
-[node name="block2" parent="wall/row8" instance=ExtResource( 5 )]
+[node name="block22" parent="wall/row8" instance=ExtResource( 8 )]
 position = Vector2( 112, 0 )
 color = "orange"
 
-[node name="block3" parent="wall/row8" instance=ExtResource( 5 )]
-position = Vector2( 184, 0 )
+[node name="block31" parent="wall/row8" instance=ExtResource( 8 )]
+position = Vector2( 160, 0 )
 color = "orange"
 
-[node name="block4" parent="wall/row8" instance=ExtResource( 5 )]
-position = Vector2( 256, 0 )
+[node name="block4b" parent="wall/row8" instance=ExtResource( 9 )]
+position = Vector2( 268, 0 )
 color = "orange"
 
 [node name="block5" parent="wall/row8" instance=ExtResource( 5 )]
@@ -293,33 +323,6 @@ color = "orange"
 [node name="block8" parent="wall/row8" instance=ExtResource( 5 )]
 position = Vector2( 544, 0 )
 color = "orange"
-
-[node name="row7" type="Node2D" parent="wall"]
-position = Vector2( 0, 176 )
-
-[node name="block1" parent="wall/row7" instance=ExtResource( 5 )]
-position = Vector2( 40, 0 )
-
-[node name="block22" parent="wall/row7" instance=ExtResource( 8 )]
-position = Vector2( 112, 0 )
-
-[node name="block3" parent="wall/row7" instance=ExtResource( 5 )]
-position = Vector2( 184, 0 )
-
-[node name="block4" parent="wall/row7" instance=ExtResource( 5 )]
-position = Vector2( 256, 0 )
-
-[node name="block5" parent="wall/row7" instance=ExtResource( 5 )]
-position = Vector2( 328, 0 )
-
-[node name="block6" parent="wall/row7" instance=ExtResource( 5 )]
-position = Vector2( 400, 0 )
-
-[node name="block7" parent="wall/row7" instance=ExtResource( 5 )]
-position = Vector2( 472, 0 )
-
-[node name="block8" parent="wall/row7" instance=ExtResource( 5 )]
-position = Vector2( 544, 0 )
 
 [node name="row9" type="Node2D" parent="wall"]
 position = Vector2( 0, 224 )
