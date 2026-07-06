@@ -92,12 +92,12 @@ color = "orange"
 position = Vector2( 256, 0 )
 color = "orange"
 
-[node name="block5" parent="wall/row2" instance=ExtResource( 5 )]
-position = Vector2( 328, 0 )
+[node name="block5c" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 352, 0 )
 color = "orange"
 
-[node name="block6" parent="wall/row2" instance=ExtResource( 5 )]
-position = Vector2( 400, 0 )
+[node name="block6c" parent="wall/row2" instance=ExtResource( 7 )]
+position = Vector2( 424, 0 )
 color = "orange"
 
 [node name="block7" parent="wall/row2" instance=ExtResource( 5 )]
@@ -131,11 +131,11 @@ color = "yellow"
 position = Vector2( 256, 0 )
 color = "yellow"
 
-[node name="block5" parent="wall/row3" instance=ExtResource( 5 )]
-position = Vector2( 328, 0 )
+[node name="block5b" parent="wall/row3" instance=ExtResource( 9 )]
+position = Vector2( 340, 0 )
 color = "yellow"
 
-[node name="block6" parent="wall/row3" instance=ExtResource( 5 )]
+[node name="block6b" parent="wall/row3" instance=ExtResource( 8 )]
 position = Vector2( 400, 0 )
 color = "yellow"
 
@@ -170,11 +170,11 @@ color = "green"
 position = Vector2( 256, 0 )
 color = "green"
 
-[node name="block5" parent="wall/row4" instance=ExtResource( 5 )]
-position = Vector2( 328, 0 )
+[node name="block5b" parent="wall/row4" instance=ExtResource( 9 )]
+position = Vector2( 340, 0 )
 color = "green"
 
-[node name="block6" parent="wall/row4" instance=ExtResource( 5 )]
+[node name="block6b" parent="wall/row4" instance=ExtResource( 8 )]
 position = Vector2( 400, 0 )
 color = "green"
 
@@ -205,12 +205,12 @@ color = "blue"
 position = Vector2( 268, 0 )
 color = "blue"
 
-[node name="block5" parent="wall/row5" instance=ExtResource( 5 )]
-position = Vector2( 328, 0 )
+[node name="block5b" parent="wall/row5" instance=ExtResource( 9 )]
+position = Vector2( 340, 0 )
 color = "blue"
 
-[node name="block6" parent="wall/row5" instance=ExtResource( 5 )]
-position = Vector2( 400, 0 )
+[node name="block6c" parent="wall/row5" instance=ExtResource( 7 )]
+position = Vector2( 424, 0 )
 color = "blue"
 
 [node name="block7" parent="wall/row5" instance=ExtResource( 5 )]
@@ -242,12 +242,13 @@ color = "purple"
 
 [node name="block4" parent="wall/row6" instance=ExtResource( 5 )]
 position = Vector2( 256, 0 )
-
-[node name="block5" parent="wall/row6" instance=ExtResource( 5 )]
-position = Vector2( 328, 0 )
 color = "purple"
 
-[node name="block6" parent="wall/row6" instance=ExtResource( 5 )]
+[node name="block5b" parent="wall/row6" instance=ExtResource( 9 )]
+position = Vector2( 340, 0 )
+color = "purple"
+
+[node name="block6b" parent="wall/row6" instance=ExtResource( 8 )]
 position = Vector2( 400, 0 )
 color = "purple"
 
@@ -264,30 +265,39 @@ position = Vector2( 0, 176 )
 
 [node name="block1" parent="wall/row7" instance=ExtResource( 5 )]
 position = Vector2( 40, 0 )
+color = "yellow"
 
 [node name="block22" parent="wall/row7" instance=ExtResource( 8 )]
 position = Vector2( 112, 0 )
+color = "yellow"
 
 [node name="block31" parent="wall/row7" instance=ExtResource( 8 )]
 position = Vector2( 160, 0 )
+color = "yellow"
 
 [node name="block33" parent="wall/row7" instance=ExtResource( 7 )]
 position = Vector2( 208, 0 )
+color = "yellow"
 
 [node name="block4" parent="wall/row7" instance=ExtResource( 5 )]
 position = Vector2( 256, 0 )
+color = "yellow"
 
-[node name="block5" parent="wall/row7" instance=ExtResource( 5 )]
-position = Vector2( 328, 0 )
+[node name="block5b" parent="wall/row7" instance=ExtResource( 9 )]
+position = Vector2( 340, 0 )
+color = "yellow"
 
-[node name="block6" parent="wall/row7" instance=ExtResource( 5 )]
+[node name="block6b" parent="wall/row7" instance=ExtResource( 8 )]
 position = Vector2( 400, 0 )
+color = "yellow"
 
 [node name="block7" parent="wall/row7" instance=ExtResource( 5 )]
 position = Vector2( 472, 0 )
+color = "yellow"
 
 [node name="block8" parent="wall/row7" instance=ExtResource( 5 )]
 position = Vector2( 544, 0 )
+color = "yellow"
 
 [node name="row8" type="Node2D" parent="wall"]
 position = Vector2( 0, 200 )
@@ -308,11 +318,11 @@ color = "orange"
 position = Vector2( 268, 0 )
 color = "orange"
 
-[node name="block5" parent="wall/row8" instance=ExtResource( 5 )]
-position = Vector2( 328, 0 )
+[node name="block5b" parent="wall/row8" instance=ExtResource( 9 )]
+position = Vector2( 340, 0 )
 color = "orange"
 
-[node name="block6" parent="wall/row8" instance=ExtResource( 5 )]
+[node name="block6b" parent="wall/row8" instance=ExtResource( 8 )]
 position = Vector2( 400, 0 )
 color = "orange"
 
@@ -329,35 +339,27 @@ position = Vector2( 0, 224 )
 
 [node name="block1" parent="wall/row9" instance=ExtResource( 5 )]
 position = Vector2( 40, 0 )
-color = "yellow"
 
 [node name="block2" parent="wall/row9" instance=ExtResource( 5 )]
 position = Vector2( 112, 0 )
-color = "yellow"
 
 [node name="block3" parent="wall/row9" instance=ExtResource( 5 )]
 position = Vector2( 184, 0 )
-color = "yellow"
 
 [node name="block4" parent="wall/row9" instance=ExtResource( 5 )]
 position = Vector2( 256, 0 )
-color = "yellow"
 
 [node name="block5" parent="wall/row9" instance=ExtResource( 5 )]
 position = Vector2( 328, 0 )
-color = "yellow"
 
 [node name="block6" parent="wall/row9" instance=ExtResource( 5 )]
 position = Vector2( 400, 0 )
-color = "yellow"
 
 [node name="block7" parent="wall/row9" instance=ExtResource( 5 )]
 position = Vector2( 472, 0 )
-color = "yellow"
 
 [node name="block8" parent="wall/row9" instance=ExtResource( 5 )]
 position = Vector2( 544, 0 )
-color = "yellow"
 
 [node name="row10" type="Node2D" parent="wall"]
 position = Vector2( 0, 248 )
