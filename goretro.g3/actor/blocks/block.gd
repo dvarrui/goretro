@@ -44,10 +44,11 @@ func play_effect():
 
 func hit():
 	hits += 1
-	if hits >= life:
-		$shape.disabled = true
 	play_effect()
-	if hits >= life: 
+	if hits >= life:
+		if Points.current_score > 0: 
+			$shape.disabled = true
+		Points.inc_current_score(10)
 		# Esperar un instante para que se vea el efecto antes de borrarlo
 		yield(effect, "tween_all_completed")
 		queue_free()

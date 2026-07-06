@@ -18,6 +18,10 @@ config/name="GoRetro"
 run/main_scene="res://ui/title.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Points="*res://global/points.gd"
+
 [display]
 
 window/size/width=582

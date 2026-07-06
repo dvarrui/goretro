@@ -16,6 +16,7 @@ func _process(delta):
 		close_game()
 
 func start_new_game():
+	Points.reset_current_score()
 	get_tree().change_scene("res://levels/" + next_level + ".tscn")
 
 func close_game():
