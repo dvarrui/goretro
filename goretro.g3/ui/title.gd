@@ -6,6 +6,8 @@ export var next_level = "retro"
 
 func _ready():
 	timer.start()
+	get_tree().set_pause(false)
+
 
 func _process(delta):
 	if Input.is_action_just_pressed("game_new"):

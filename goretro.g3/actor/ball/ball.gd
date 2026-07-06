@@ -15,7 +15,7 @@ func _physics_process(delta):
 			sound_block.play()
 			body.hit()
 			
-			var f = self.linear_velocity.length()
+			# var f = self.linear_velocity.length()
 			# if f < 250:
 			#	apply_central_impulse(Vector2(100, 100))
 			# else:

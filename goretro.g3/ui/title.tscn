@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://ui/title.gd" type="Script" id=1]
 [ext_resource path="res://assets/MinecraftRegular-Bmg3.otf" type="DynamicFontData" id=2]
@@ -46,6 +46,9 @@ animations = [ {
 "name": "move",
 "speed": 5.0
 } ]
+
+[sub_resource type="DynamicFont" id=17]
+font_data = ExtResource( 2 )
 
 [node name="title" type="Node2D"]
 script = ExtResource( 1 )
@@ -109,6 +112,14 @@ frames = SubResource( 10 )
 
 [node name="timer" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="version" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 579.0
+margin_right = 49.0
+margin_bottom = 593.0
+custom_fonts/font = SubResource( 17 )
+text = "v2.0"
 
 [connection signal="pressed" from="margin/v_container/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="margin/v_container/quit" to="." method="_on_quit_pressed"]
