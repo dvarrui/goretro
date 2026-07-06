@@ -20,7 +20,7 @@ load_path = "res://.import/goretro.png-72edc425585dbc47ee67f4c30bb02e39.stex"
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.5, 10.3 )
 
-[node name="block3" type="StaticBody2D" groups=["block"]]
+[node name="block1c" type="StaticBody2D" groups=["block"]]
 input_pickable = true
 script = ExtResource( 1 )
 
