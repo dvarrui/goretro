@@ -43,7 +43,9 @@ func play_effect():
 	effect.start()
 
 func hit():
-	hits += 1 
+	hits += 1
+	if hits >= life:
+		$shape.disabled = true
 	play_effect()
 	if hits >= life: 
 		# Esperar un instante para que se vea el efecto antes de borrarlo
