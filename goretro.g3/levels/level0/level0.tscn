@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/sfx/levelup.ogg" type="AudioStream" id=2]
 [ext_resource path="res://actor/player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://actor/ball/ball.tscn" type="PackedScene" id=4]
-[ext_resource path="res://ui/pause.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/pause/pause.tscn" type="PackedScene" id=5]
 [ext_resource path="res://actor/wall/blocks/block3.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]

@@ -1,14 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/MinecraftRegular-Bmg3.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://ui/pause.gd" type="Script" id=3]
-
-[sub_resource type="DynamicFontData" id=1]
-font_path = "res://assets/MinecraftRegular-Bmg3.otf"
-
-[sub_resource type="DynamicFont" id=2]
-size = 32
-font_data = SubResource( 1 )
+[ext_resource path="res://ui/pause/pause.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=3]
 size = 64
@@ -41,18 +34,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="paused" type="Label" parent="v_container"]
-margin_top = 184.0
-margin_right = 329.0
-margin_bottom = 217.0
-custom_fonts/font = SubResource( 2 )
-text = "Paused!"
-align = 1
-
 [node name="title" type="Label" parent="v_container"]
-margin_top = 221.0
+margin_top = 202.0
 margin_right = 329.0
-margin_bottom = 354.0
+margin_bottom = 335.0
 custom_fonts/font = SubResource( 3 )
 text = "Canarias
 Go Retro"
@@ -60,9 +45,9 @@ align = 1
 autowrap = true
 
 [node name="continue" type="Button" parent="v_container"]
-margin_top = 358.0
+margin_top = 339.0
 margin_right = 329.0
-margin_bottom = 381.0
+margin_bottom = 362.0
 custom_colors/font_color_disabled = Color( 0.0705882, 0.0431373, 0.933333, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Cotinue"
@@ -71,9 +56,9 @@ __meta__ = {
 }
 
 [node name="quit" type="Button" parent="v_container"]
-margin_top = 385.0
+margin_top = 366.0
 margin_right = 329.0
-margin_bottom = 408.0
+margin_bottom = 389.0
 custom_fonts/font = SubResource( 5 )
 text = "Quit"
 __meta__ = {

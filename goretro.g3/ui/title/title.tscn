@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://ui/title.gd" type="Script" id=1]
+[ext_resource path="res://ui/title/title.gd" type="Script" id=1]
 [ext_resource path="res://assets/MinecraftRegular-Bmg3.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/bombas.png" type="Texture" id=3]
 

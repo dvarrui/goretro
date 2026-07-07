@@ -14,8 +14,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GoRetro"
-run/main_scene="res://ui/title.tscn"
+config/name="GoRetro v2.0"
+run/main_scene="res://ui/title/title.tscn"
 config/icon="res://icon.png"
 
 [autoload]

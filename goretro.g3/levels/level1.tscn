@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://levels/level.gd" type="Script" id=1]
-[ext_resource path="res://ui/pause.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/pause/pause.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/sfx/levelup.ogg" type="AudioStream" id=3]
 [ext_resource path="res://actor/player/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://actor/blocks/block3.tscn" type="PackedScene" id=5]
 [ext_resource path="res://actor/ball/ball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/retro.png" type="Texture" id=7]
+[ext_resource path="res://ui/points/points.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 300, 10 )
@@ -17,30 +18,40 @@ extents = Vector2( 10, 300 )
 [node name="level1" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="background" type="ColorRect" parent="."]
+[node name="etc" type="Node2D" parent="."]
+
+[node name="background" type="ColorRect" parent="etc"]
 margin_right = 582.0
 margin_bottom = 600.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="borders" type="Node2D" parent="."]
+[node name="borders" type="Node2D" parent="etc"]
 
-[node name="top" type="StaticBody2D" parent="borders"]
+[node name="top" type="StaticBody2D" parent="etc/borders"]
 position = Vector2( 300, -10 )
 
-[node name="shape" type="CollisionShape2D" parent="borders/top"]
+[node name="shape" type="CollisionShape2D" parent="etc/borders/top"]
 shape = SubResource( 1 )
 
-[node name="left" type="StaticBody2D" parent="borders"]
+[node name="left" type="StaticBody2D" parent="etc/borders"]
 position = Vector2( -10, 300 )
 
-[node name="shape" type="CollisionShape2D" parent="borders/left"]
+[node name="shape" type="CollisionShape2D" parent="etc/borders/left"]
 shape = SubResource( 2 )
 
-[node name="right" type="StaticBody2D" parent="borders"]
+[node name="right" type="StaticBody2D" parent="etc/borders"]
 position = Vector2( 592, 300 )
 
-[node name="shape" type="CollisionShape2D" parent="borders/right"]
+[node name="shape" type="CollisionShape2D" parent="etc/borders/right"]
 shape = SubResource( 2 )
+
+[node name="points" parent="etc" instance=ExtResource( 8 )]
+
+[node name="pause" parent="etc" instance=ExtResource( 2 )]
+visible = false
+
+[node name="sound" type="AudioStreamPlayer2D" parent="etc"]
+stream = ExtResource( 3 )
 
 [node name="wall" type="Node2D" parent="."]
 
@@ -459,9 +470,3 @@ linear_velocity = Vector2( 50, -300 )
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 300, 550 )
-
-[node name="pause" parent="." instance=ExtResource( 2 )]
-visible = false
-
-[node name="sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 3 )

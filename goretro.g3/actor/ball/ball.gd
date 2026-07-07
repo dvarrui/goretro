@@ -27,4 +27,4 @@ func _physics_process(delta):
 func _on_visibility_screen_exited():
 	sound_gameover.play()
 	yield(get_tree().create_timer(1.0), "timeout")
-	get_tree().change_scene("res://ui/title.tscn")
+	get_tree().change_scene("res://ui/title/title.tscn")
