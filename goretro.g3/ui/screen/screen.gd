@@ -1,24 +1,59 @@
 extends CanvasLayer
 
-var cont = 0
+var cont = 4
 var mode = 0
+var screen_size = Vector2(600, 600)
+var shaders = []
+export var state = "normal"
+var params = [
+	[0, 0, 300, 300],
+	[300, 0, 600, 300],
+	[0, 300, 300, 600],
+	[300, 300, 600, 600]
+]
+
+func _ready():
+	shaders.append($crt)
+	shaders.append($gray)
+	shaders.append($green)
+	shaders.append($crt_green)
+	reset()
+
+func reset():
+	state = "normal"
+	for shader in shaders:
+		shader.visible = false
+		shader.margin_left = 0
+		shader.margin_top = 0
+		shader.margin_right = screen_size.x
+		shader.margin_bottom = screen_size.y
 
 func change():
 	cont +=1
-	mode = cont %  4
-	if mode == 0:
-		$crt.visible = false
-		$gray.visible = false
-		$green.visible = false
-	elif mode == 1:
-		$crt.visible = true
-		$gray.visible = false
-		$green.visible = false
-	elif mode == 2:
-		$crt.visible = false
-		$gray.visible = true
-		$green.visible = false
-	elif mode == 3:
-		$crt.visible = false
-		$gray.visible = false
-		$green.visible = true
+	mode = cont % (shaders.size() + 1)
+
+	reset()
+	if mode < shaders.size():
+		shaders[mode].visible = true
+		state = shaders[mode].name
+
+func change_panel():
+	if state == "normal":
+		state = "panel"
+
+		params.shuffle()
+		for i in [0, 1, 2, 3]:
+			shaders[i].visible = true
+			shaders[i].margin_left = params[i][0]
+			shaders[i].margin_top = params[i][1]
+			shaders[i].margin_right = params[i][2]
+			shaders[i].margin_bottom = params[i][3]
+	else:
+		state = "normal"
+		reset()
+
+func _process(delta):
+	if Input.is_action_just_pressed("screen_shader"):
+		self.change()
+	if Input.is_action_just_pressed("screen_panel"):
+		self.change_panel()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ui/screen/screen.gd" type="Script" id=1]
 
@@ -86,6 +86,47 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id=8]
 shader = SubResource( 7 )
 
+[sub_resource type="Shader" id=9]
+code = "shader_type canvas_item;
+
+// Parámetros del efecto CRT
+uniform float scanline_strength : hint_range(0.0, 1.0) = 0.3;
+uniform float scanline_count : hint_range(0.0, 1080.0) = 400.0;
+uniform float dot_size : hint_range(0.0, 10.0) = 1.0;
+
+void fragment() {
+    vec2 uv = SCREEN_UV;
+    
+    // 1. Obtener color base
+    vec3 color = texture(SCREEN_TEXTURE, uv).rgb;
+    
+    // 2. Convertir a escala de grises (Base para el tono verde)
+    float gray = dot(color, vec3(0.299, 0.587, 0.114));
+    
+    // 3. Aplicar tono verde
+    vec3 final_color = vec3(0.1, 0.8, 0.2) * gray;
+    
+    // 4. Efecto de Scanlines (sobre el color verde)
+    float scanline = sin(uv.y * scanline_count * 3.14159) * scanline_strength;
+    final_color -= scanline;
+    
+    // 5. Efecto de Puntos (Dot Mask)
+    float pixel_x = mod(uv.x * SCREEN_PIXEL_SIZE.x / dot_size, 2.0);
+    float pixel_y = mod(uv.y * SCREEN_PIXEL_SIZE.y / dot_size, 2.0);
+    
+    if (pixel_x > 1.0 && pixel_y > 1.0) {
+        final_color *= 0.9;
+    }
+    
+    COLOR = vec4(final_color, 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = SubResource( 9 )
+shader_param/scanline_strength = 0.3
+shader_param/scanline_count = 400.0
+shader_param/dot_size = 1.0
+
 [node name="screen" type="CanvasLayer"]
 follow_viewport_enable = true
 script = ExtResource( 1 )
@@ -107,3 +148,9 @@ visible = false
 material = SubResource( 8 )
 margin_right = 586.0
 margin_bottom = 602.0
+
+[node name="crt_green" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 10 )
+margin_right = 580.0
+margin_bottom = 615.0

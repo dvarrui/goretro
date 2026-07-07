@@ -5,7 +5,6 @@ var main_scene = "res://ui/title/title.tscn"
 onready var sound = $etc/sound
 onready var pause = $etc/pause
 onready var points = $etc/points
-onready var screen = $etc/screen
 
 func _ready():
 	points.set_level_name(name)
@@ -21,8 +20,6 @@ func _process(_delta):
 		# Pause game
 		pause.visible = true
 		get_tree().set_pause(true)
-	if Input.is_action_just_pressed("retro"):
-		screen.change()
 
 func check_wall_damage():
 	var blocks = get_tree().get_nodes_in_group("block")
