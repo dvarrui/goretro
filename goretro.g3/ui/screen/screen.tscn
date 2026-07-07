@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ui/screen/screen.gd" type="Script" id=1]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+
+// Parámetros ajustables desde el Inspector
+uniform float scanline_strength : hint_range(0.0, 1.0) = 0.3;
+uniform float scanline_count : hint_range(0.0, 1080.0) = 400.0;
+uniform float dot_size : hint_range(0.0, 10.0) = 1.0;
+
+void fragment() {
+    vec2 uv = SCREEN_UV;
+    
+    // 1. Obtener color base
+    vec3 color = texture(SCREEN_TEXTURE, uv).rgb;
+    
+    // 2. Efecto de Scanlines (Líneas horizontales)
+    float scanline = sin(uv.y * scanline_count * 3.14159) * scanline_strength;
+    color -= scanline;
+    
+    // 3. Efecto de Puntos (Dot Mask / Máscara de rejilla)
+    // Usamos el residuo de la posición para crear un patrón de cuadrícula
+    float pixel_x = mod(uv.x * SCREEN_PIXEL_SIZE.x / dot_size, 2.0);
+    float pixel_y = mod(uv.y * SCREEN_PIXEL_SIZE.y / dot_size, 2.0);
+    
+    // Oscurecemos ligeramente ciertos puntos para simular la rejilla de fósforo
+    if (pixel_x > 1.0 && pixel_y > 1.0) {
+        color *= 0.9;
+    }
+    
+    COLOR = vec4(color, 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+shader_param/scanline_strength = 0.3
+shader_param/scanline_count = 400.0
+shader_param/dot_size = 1.0
+
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
+
+// Controla qué tan intenso es el ruido (0.0 a 1.0)
+uniform float noise_strength : hint_range(0.0, 0.5) = 0.1;
+
+void fragment() {
+    // 1. Obtener el color base de la pantalla
+    vec3 color = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;
+    
+    // 2. Convertir a escala de grises usando luminancia
+    float gray = dot(color, vec3(0.299, 0.587, 0.114));
+    
+    // 3. Añadir ruido aleatorio para efecto de película vieja
+    float random = fract(sin(dot(UV, vec2(12.9898, 78.233))) * 43758.5453);
+    float grain = (random - 0.5) * noise_strength;
+    
+    // 4. Aplicar el resultado final
+    COLOR = vec4(vec3(gray + grain), 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+shader_param/noise_strength = 0.1
+
+[sub_resource type="Shader" id=7]
+code = "shader_type canvas_item;
+
+void fragment() {
+    // 1. Obtener el color original de la pantalla
+    vec3 color = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;
+    
+    // 2. Convertir a escala de grises para obtener la intensidad de luz (luminosidad)
+    float gray = dot(color, vec3(0.299, 0.587, 0.114));
+    
+    // 3. Crear el tono verde. 
+    // Usamos el valor 'gray' para definir la intensidad del canal verde.
+    // Los canales rojo y azul se mantienen muy bajos para dar ese toque antiguo.
+    vec3 green_color = vec3(0.1, 0.8, 0.2) * gray;
+    
+    // 4. Asignar el color final
+    COLOR = vec4(green_color, 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = SubResource( 7 )
+
+[node name="screen" type="CanvasLayer"]
+follow_viewport_enable = true
+script = ExtResource( 1 )
+
+[node name="crt" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 4 )
+margin_right = 578.0
+margin_bottom = 599.0
+
+[node name="gray" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 6 )
+margin_right = 588.0
+margin_bottom = 603.0
+
+[node name="green" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 8 )
+margin_right = 586.0
+margin_bottom = 602.0

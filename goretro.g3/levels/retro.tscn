@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://levels/level.gd" type="Script" id=1]
 [ext_resource path="res://ui/pause/pause.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://actor/blocks/block1a.tscn" type="PackedScene" id=8]
 [ext_resource path="res://actor/blocks/block2b.tscn" type="PackedScene" id=9]
 [ext_resource path="res://ui/points/points.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ui/screen/screen.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 300, 10 )
@@ -54,6 +55,8 @@ visible = false
 
 [node name="sound" type="AudioStreamPlayer2D" parent="etc"]
 stream = ExtResource( 3 )
+
+[node name="screen" parent="etc" instance=ExtResource( 11 )]
 
 [node name="wall" type="Node2D" parent="."]
 position = Vector2( 0, 24 )
