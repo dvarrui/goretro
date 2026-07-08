@@ -17,9 +17,9 @@ func _ready():
 	shaders.append($gray)
 	shaders.append($green)
 	shaders.append($gameboy)
-	reset()
+	reset_shaders()
 
-func reset():
+func reset_shaders():
 	state = "normal"
 	for shader in shaders:
 		shader.visible = false
@@ -32,7 +32,7 @@ func change():
 	cont +=1
 	mode = cont % (shaders.size() + 1)
 
-	reset()
+	reset_shaders()
 	if mode < shaders.size():
 		shaders[mode].visible = true
 		state = shaders[mode].name
@@ -50,10 +50,17 @@ func change_panel():
 			shaders[i].margin_bottom = params[i][3]
 	else:
 		state = "normal"
-		reset()
+		reset_shaders()
 
 func _process(delta):
 	if Input.is_action_just_pressed("screen_shader"):
 		self.change()
 	if Input.is_action_just_pressed("screen_panel"):
 		self.change_panel()
+	# self.update_shaders()
+
+func update_shaders():
+	if $gray.visible:
+		# Usamos OS.get_ticks_msec() o una variable acumulativa para el tiempo
+		var time_value = OS.get_ticks_msec() / 1000.0
+		$gray.material.set_shader_param("time", time_value)

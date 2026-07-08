@@ -25,6 +25,7 @@ Points="*res://global/points.gd"
 [display]
 
 window/size/width=582
+window/size/resizable=false
 
 [input]
 
