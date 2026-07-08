@@ -6,17 +6,17 @@ var screen_size = Vector2(600, 600)
 var shaders = []
 export var state = "normal"
 var params = [
-	[0, 0, 300, 300],
-	[300, 0, 600, 300],
-	[0, 300, 300, 600],
-	[300, 300, 600, 600]
+	[0, 0, 150, 600],
+	[150, 0, 300, 600],
+	[300, 0, 450, 600],
+	[450, 0, 600, 600]
 ]
 
 func _ready():
 	shaders.append($crt)
 	shaders.append($gray)
 	shaders.append($green)
-	shaders.append($crt_green)
+	shaders.append($gameboy)
 	reset()
 
 func reset():
