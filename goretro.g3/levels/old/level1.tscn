@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://levels/level.gd" type="Script" id=1]
-[ext_resource path="res://ui/pause/pause.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/sfx/levelup.ogg" type="AudioStream" id=3]
-[ext_resource path="res://actor/player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sfx/levelup.ogg" type="AudioStream" id=2]
+[ext_resource path="res://assets/retro.png" type="Texture" id=3]
+[ext_resource path="res://ui/pause/pause.tscn" type="PackedScene" id=4]
 [ext_resource path="res://actor/blocks/block3.tscn" type="PackedScene" id=5]
-[ext_resource path="res://actor/ball/ball.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/retro.png" type="Texture" id=7]
-[ext_resource path="res://ui/points/points.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ui/points/points.tscn" type="PackedScene" id=6]
+[ext_resource path="res://actor/ball/ball.tscn" type="PackedScene" id=7]
+[ext_resource path="res://actor/player/player.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 300, 10 )
@@ -45,13 +45,13 @@ position = Vector2( 592, 300 )
 [node name="shape" type="CollisionShape2D" parent="etc/borders/right"]
 shape = SubResource( 2 )
 
-[node name="points" parent="etc" instance=ExtResource( 8 )]
+[node name="points" parent="etc" instance=ExtResource( 6 )]
 
-[node name="pause" parent="etc" instance=ExtResource( 2 )]
+[node name="pause" parent="etc" instance=ExtResource( 4 )]
 visible = false
 
 [node name="sound" type="AudioStreamPlayer2D" parent="etc"]
-stream = ExtResource( 3 )
+stream = ExtResource( 2 )
 
 [node name="wall" type="Node2D" parent="."]
 
@@ -462,11 +462,11 @@ color = "purple"
 [node name="text" type="Sprite" parent="wall"]
 position = Vector2( 300, 150 )
 scale = Vector2( 8, 8 )
-texture = ExtResource( 7 )
+texture = ExtResource( 3 )
 
-[node name="ball" parent="." instance=ExtResource( 6 )]
+[node name="ball" parent="." instance=ExtResource( 7 )]
 position = Vector2( 300, 521 )
 linear_velocity = Vector2( 50, -300 )
 
-[node name="player" parent="." instance=ExtResource( 4 )]
+[node name="player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 300, 550 )
